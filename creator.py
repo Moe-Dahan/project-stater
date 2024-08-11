@@ -1,7 +1,8 @@
 import os
 import subprocess
 
-parent_dir = "" # directory you like to store all work
+
+parent_dir = "" # change directory you like to store all work
 
 user_folder_create = input("[+] Project Name!: ")
 
@@ -53,5 +54,11 @@ js_file_path = os.path.join(js_folder, "app.js")
 with open(js_file_path, "w") as file:
     file.write("// js file\n")
 
+# create the images folder
+images_folder = os.path.join(assets_folder, "images")
+os.mkdir(images_folder)
+
 # opens the project folder in vs code and runs vs code via powershell
 subprocess.run(["code", project_dir], shell=True)
+
+
